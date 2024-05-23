@@ -1,20 +1,15 @@
-import modelli.Calciatore;
-import modelli.SquadraDiCalcio;
+import GestioneOrario.Orario;
+import GestioneOrario.TipoOrario;
 
 public class App {
 
     public static void main(String[] args) {
-        Calciatore c = new Calciatore("salvatore", "monetti", 10, 100);
-        c.stipendio=50000;
-        
-        Calciatore c2 = new Calciatore("dusan", "vlahovic", 0, 4000000);
-
-        SquadraDiCalcio s = new SquadraDiCalcio("Juventus", "Torino", 1897);
-        s.budget=10000000;
-
-        s.add(c, 9);
-        s.add(c2,2);
-
-        System.out.println(s);
+        Orario o = new Orario();
+        o.setOra(9);
+        o.setMinuti(16);
+        o.setSecondi(32);
+        o.calcolaAggiunta(24, TipoOrario.ORA);
+        o.calcolaAggiunta(10, TipoOrario.SECONDI);
+        System.out.println(o);
     }
 }

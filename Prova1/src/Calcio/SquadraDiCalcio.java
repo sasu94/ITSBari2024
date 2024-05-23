@@ -1,4 +1,4 @@
-package modelli;
+package Calcio;
 
 public class SquadraDiCalcio {
     public String nome;
